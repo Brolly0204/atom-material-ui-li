@@ -1,0 +1,48 @@
+.tree-view {
+    font-size: 1em;
+    background: @tree-view-background-color;
+    /* background: #292D3E; */
+    background: #263238;
+
+    .selected::before {
+        background: fade(@text-color, 5%);
+    }
+
+    &:focus {
+        .selected::before {
+            background: @base-color;
+        }
+    }
+
+    .amu-panel-contrast & {
+        background-color: darken(@app-background-color, 1.5%);
+        /* background-color: #292D3E; */
+        background-color: #263238;
+    }
+    .text {
+      color: #B2CCD6;
+    }
+    .icon {
+      margin-left: -1em;
+    }
+}
+
+.tree-view-resizer {
+    .tree-view-resize-handle {
+        width: 8px;
+    }
+}
+
+.focusable-panel {
+    opacity: 1;
+
+    &:focus {
+        .selected {
+            color: @accent-text-color;
+
+            &::before {
+                background: @base-color;
+            }
+        }
+    }
+}
